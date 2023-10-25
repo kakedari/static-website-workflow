@@ -1,0 +1,592 @@
+{
+  "version": 4,
+  "terraform_version": "1.6.1",
+  "serial": 2,
+  "lineage": "5af97c09-c1a9-b234-468f-1e7ccd649220",
+  "outputs": {},
+  "resources": [
+    {
+      "mode": "managed",
+      "type": "aws_s3_bucket",
+      "name": "bucket",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "acceleration_status": "",
+            "acl": "private",
+            "arn": "arn:aws:s3:::kaveri-static-website",
+            "bucket": "kaveri-static-website",
+            "bucket_domain_name": "kaveri-static-website.s3.amazonaws.com",
+            "bucket_prefix": null,
+            "bucket_regional_domain_name": "kaveri-static-website.s3.ap-south-1.amazonaws.com",
+            "cors_rule": [],
+            "force_destroy": false,
+            "grant": [],
+            "hosted_zone_id": "Z11RGJOFQNVJUP",
+            "id": "kaveri-static-website",
+            "lifecycle_rule": [],
+            "logging": [],
+            "object_lock_configuration": [],
+            "object_lock_enabled": false,
+            "policy": null,
+            "region": "ap-south-1",
+            "replication_configuration": [],
+            "request_payer": "BucketOwner",
+            "server_side_encryption_configuration": [
+              {
+                "rule": [
+                  {
+                    "apply_server_side_encryption_by_default": [
+                      {
+                        "kms_master_key_id": "",
+                        "sse_algorithm": "AES256"
+                      }
+                    ],
+                    "bucket_key_enabled": false
+                  }
+                ]
+              }
+            ],
+            "tags": {
+              "Created_By": "Terraform",
+              "Name": "S3-Static-Website"
+            },
+            "tags_all": {
+              "Created_By": "Terraform",
+              "Name": "S3-Static-Website"
+            },
+            "versioning": [
+              {
+                "enabled": false,
+                "mfa_delete": false
+              }
+            ],
+            "website": [
+              {
+                "error_document": "",
+                "index_document": "index.html",
+                "redirect_all_requests_to": "",
+                "routing_rules": ""
+              }
+            ],
+            "website_domain": "s3-website.ap-south-1.amazonaws.com",
+            "website_endpoint": "kaveri-static-website.s3-website.ap-south-1.amazonaws.com"
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA=="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_s3_bucket",
+      "name": "log_bucket",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "acceleration_status": "",
+            "acl": "private",
+            "arn": "arn:aws:s3:::logs-kaveri-static-website",
+            "bucket": "logs-kaveri-static-website",
+            "bucket_domain_name": "logs-kaveri-static-website.s3.amazonaws.com",
+            "bucket_prefix": null,
+            "bucket_regional_domain_name": "logs-kaveri-static-website.s3.ap-south-1.amazonaws.com",
+            "cors_rule": [],
+            "force_destroy": false,
+            "grant": [],
+            "hosted_zone_id": "Z11RGJOFQNVJUP",
+            "id": "logs-kaveri-static-website",
+            "lifecycle_rule": [],
+            "logging": [],
+            "object_lock_configuration": [],
+            "object_lock_enabled": false,
+            "policy": null,
+            "region": "ap-south-1",
+            "replication_configuration": [],
+            "request_payer": "BucketOwner",
+            "server_side_encryption_configuration": [
+              {
+                "rule": [
+                  {
+                    "apply_server_side_encryption_by_default": [
+                      {
+                        "kms_master_key_id": "",
+                        "sse_algorithm": "AES256"
+                      }
+                    ],
+                    "bucket_key_enabled": false
+                  }
+                ]
+              }
+            ],
+            "tags": null,
+            "tags_all": {},
+            "versioning": [
+              {
+                "enabled": false,
+                "mfa_delete": false
+              }
+            ],
+            "website": [],
+            "website_domain": null,
+            "website_endpoint": null
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA=="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_s3_bucket_object",
+      "name": "oject",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "index_key": "README.md",
+          "schema_version": 0,
+          "attributes": {
+            "acl": "private",
+            "bucket": "kaveri-static-website",
+            "bucket_key_enabled": false,
+            "cache_control": "",
+            "content": null,
+            "content_base64": null,
+            "content_disposition": "",
+            "content_encoding": "",
+            "content_language": "",
+            "content_type": "text/html",
+            "etag": "9242d0f9e32a96e3df3fb658b4a3168e",
+            "force_destroy": false,
+            "id": "README.md",
+            "key": "README.md",
+            "kms_key_id": null,
+            "metadata": null,
+            "object_lock_legal_hold_status": "",
+            "object_lock_mode": "",
+            "object_lock_retain_until_date": "",
+            "server_side_encryption": "AES256",
+            "source": "temp/README.md",
+            "source_hash": null,
+            "storage_class": "STANDARD",
+            "tags": null,
+            "tags_all": {},
+            "version_id": "",
+            "website_redirect": ""
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "aws_s3_bucket.bucket"
+          ]
+        },
+        {
+          "index_key": "australia.jpg",
+          "schema_version": 0,
+          "attributes": {
+            "acl": "private",
+            "bucket": "kaveri-static-website",
+            "bucket_key_enabled": false,
+            "cache_control": "",
+            "content": null,
+            "content_base64": null,
+            "content_disposition": "",
+            "content_encoding": "",
+            "content_language": "",
+            "content_type": "text/html",
+            "etag": "c393fabbfacbbbda17ef67f7a23021cc",
+            "force_destroy": false,
+            "id": "australia.jpg",
+            "key": "australia.jpg",
+            "kms_key_id": null,
+            "metadata": null,
+            "object_lock_legal_hold_status": "",
+            "object_lock_mode": "",
+            "object_lock_retain_until_date": "",
+            "server_side_encryption": "AES256",
+            "source": "temp/australia.jpg",
+            "source_hash": null,
+            "storage_class": "STANDARD",
+            "tags": null,
+            "tags_all": {},
+            "version_id": "fkv5U5rToduTAdkuH..vziqe9GXK9WWy",
+            "website_redirect": ""
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "aws_s3_bucket.bucket"
+          ]
+        },
+        {
+          "index_key": "costa_rica.jpg",
+          "schema_version": 0,
+          "attributes": {
+            "acl": "private",
+            "bucket": "kaveri-static-website",
+            "bucket_key_enabled": false,
+            "cache_control": "",
+            "content": null,
+            "content_base64": null,
+            "content_disposition": "",
+            "content_encoding": "",
+            "content_language": "",
+            "content_type": "text/html",
+            "etag": "8feb3a33ef9fa84ac89f0d2100d2fa9a",
+            "force_destroy": false,
+            "id": "costa_rica.jpg",
+            "key": "costa_rica.jpg",
+            "kms_key_id": null,
+            "metadata": null,
+            "object_lock_legal_hold_status": "",
+            "object_lock_mode": "",
+            "object_lock_retain_until_date": "",
+            "server_side_encryption": "AES256",
+            "source": "temp/costa_rica.jpg",
+            "source_hash": null,
+            "storage_class": "STANDARD",
+            "tags": null,
+            "tags_all": {},
+            "version_id": "",
+            "website_redirect": ""
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "aws_s3_bucket.bucket"
+          ]
+        },
+        {
+          "index_key": "index.html",
+          "schema_version": 0,
+          "attributes": {
+            "acl": "private",
+            "bucket": "kaveri-static-website",
+            "bucket_key_enabled": false,
+            "cache_control": "",
+            "content": null,
+            "content_base64": null,
+            "content_disposition": "",
+            "content_encoding": "",
+            "content_language": "",
+            "content_type": "text/html",
+            "etag": "fab5ee71a440914d614e0e32c5a58782",
+            "force_destroy": false,
+            "id": "index.html",
+            "key": "index.html",
+            "kms_key_id": null,
+            "metadata": null,
+            "object_lock_legal_hold_status": "",
+            "object_lock_mode": "",
+            "object_lock_retain_until_date": "",
+            "server_side_encryption": "AES256",
+            "source": "temp/index.html",
+            "source_hash": null,
+            "storage_class": "STANDARD",
+            "tags": null,
+            "tags_all": {},
+            "version_id": "",
+            "website_redirect": ""
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "aws_s3_bucket.bucket"
+          ]
+        },
+        {
+          "index_key": "lapland_of_norway.jpg",
+          "schema_version": 0,
+          "attributes": {
+            "acl": "private",
+            "bucket": "kaveri-static-website",
+            "bucket_key_enabled": false,
+            "cache_control": "",
+            "content": null,
+            "content_base64": null,
+            "content_disposition": "",
+            "content_encoding": "",
+            "content_language": "",
+            "content_type": "text/html",
+            "etag": "ee6b2210b1376b0c52376caf4c9d7d3c",
+            "force_destroy": false,
+            "id": "lapland_of_norway.jpg",
+            "key": "lapland_of_norway.jpg",
+            "kms_key_id": null,
+            "metadata": null,
+            "object_lock_legal_hold_status": "",
+            "object_lock_mode": "",
+            "object_lock_retain_until_date": "",
+            "server_side_encryption": "AES256",
+            "source": "temp/lapland_of_norway.jpg",
+            "source_hash": null,
+            "storage_class": "STANDARD",
+            "tags": null,
+            "tags_all": {},
+            "version_id": "VkLnqQBRvmej1Ey8feCg5V4EbES0Jald",
+            "website_redirect": ""
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "aws_s3_bucket.bucket"
+          ]
+        },
+        {
+          "index_key": "nuremberg.jpg",
+          "schema_version": 0,
+          "attributes": {
+            "acl": "private",
+            "bucket": "kaveri-static-website",
+            "bucket_key_enabled": false,
+            "cache_control": "",
+            "content": null,
+            "content_base64": null,
+            "content_disposition": "",
+            "content_encoding": "",
+            "content_language": "",
+            "content_type": "text/html",
+            "etag": "c0ca0631face27128a2efe06ba2bfea5",
+            "force_destroy": false,
+            "id": "nuremberg.jpg",
+            "key": "nuremberg.jpg",
+            "kms_key_id": null,
+            "metadata": null,
+            "object_lock_legal_hold_status": "",
+            "object_lock_mode": "",
+            "object_lock_retain_until_date": "",
+            "server_side_encryption": "AES256",
+            "source": "temp/nuremberg.jpg",
+            "source_hash": null,
+            "storage_class": "STANDARD",
+            "tags": null,
+            "tags_all": {},
+            "version_id": "null",
+            "website_redirect": ""
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "aws_s3_bucket.bucket"
+          ]
+        },
+        {
+          "index_key": "scotland.jpg",
+          "schema_version": 0,
+          "attributes": {
+            "acl": "private",
+            "bucket": "kaveri-static-website",
+            "bucket_key_enabled": false,
+            "cache_control": "",
+            "content": null,
+            "content_base64": null,
+            "content_disposition": "",
+            "content_encoding": "",
+            "content_language": "",
+            "content_type": "text/html",
+            "etag": "2b7c03997caabaca424b8359ccd9bae8",
+            "force_destroy": false,
+            "id": "scotland.jpg",
+            "key": "scotland.jpg",
+            "kms_key_id": null,
+            "metadata": null,
+            "object_lock_legal_hold_status": "",
+            "object_lock_mode": "",
+            "object_lock_retain_until_date": "",
+            "server_side_encryption": "AES256",
+            "source": "temp/scotland.jpg",
+            "source_hash": null,
+            "storage_class": "STANDARD",
+            "tags": null,
+            "tags_all": {},
+            "version_id": "LohNX8Rb4nNTVxXhglfGXQzbz7ZZeDeB",
+            "website_redirect": ""
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "aws_s3_bucket.bucket"
+          ]
+        },
+        {
+          "index_key": "st._moritz_switzerland.jpg",
+          "schema_version": 0,
+          "attributes": {
+            "acl": "private",
+            "bucket": "kaveri-static-website",
+            "bucket_key_enabled": false,
+            "cache_control": "",
+            "content": null,
+            "content_base64": null,
+            "content_disposition": "",
+            "content_encoding": "",
+            "content_language": "",
+            "content_type": "text/html",
+            "etag": "9a0d9e77086625e0387cd796b4aeb0b4",
+            "force_destroy": false,
+            "id": "st._moritz_switzerland.jpg",
+            "key": "st._moritz_switzerland.jpg",
+            "kms_key_id": null,
+            "metadata": null,
+            "object_lock_legal_hold_status": "",
+            "object_lock_mode": "",
+            "object_lock_retain_until_date": "",
+            "server_side_encryption": "AES256",
+            "source": "temp/st._moritz_switzerland.jpg",
+            "source_hash": null,
+            "storage_class": "STANDARD",
+            "tags": null,
+            "tags_all": {},
+            "version_id": "uO7IGQPsFDot49dlNWgkjuUTbeYIZeJH",
+            "website_redirect": ""
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "aws_s3_bucket.bucket"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_s3_bucket_policy",
+      "name": "allow_access_from_another_account",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "bucket": "kaveri-static-website",
+            "id": "kaveri-static-website",
+            "policy": "{\"Statement\":[{\"Action\":\"s3:GetObject\",\"Effect\":\"Allow\",\"Principal\":\"*\",\"Resource\":\"arn:aws:s3:::kaveri-static-website/*\",\"Sid\":\"PublicReadGetObject\"}],\"Version\":\"2012-10-17\"}"
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "aws_s3_bucket.bucket",
+            "aws_s3_bucket_object.oject"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_s3_bucket_public_access_block",
+      "name": "block_access",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "block_public_acls": false,
+            "block_public_policy": false,
+            "bucket": "kaveri-static-website",
+            "id": "kaveri-static-website",
+            "ignore_public_acls": false,
+            "restrict_public_buckets": false
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "aws_s3_bucket.bucket"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_s3_bucket_server_side_encryption_configuration",
+      "name": "bucket_encryption",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "bucket": "kaveri-static-website",
+            "expected_bucket_owner": "",
+            "id": "kaveri-static-website",
+            "rule": [
+              {
+                "apply_server_side_encryption_by_default": [
+                  {
+                    "kms_master_key_id": "",
+                    "sse_algorithm": "AES256"
+                  }
+                ],
+                "bucket_key_enabled": null
+              }
+            ]
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "aws_s3_bucket.bucket"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_s3_bucket_versioning",
+      "name": "versioning_bucket",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "bucket": "kaveri-static-website",
+            "expected_bucket_owner": "",
+            "id": "kaveri-static-website",
+            "mfa": null,
+            "versioning_configuration": [
+              {
+                "mfa_delete": "",
+                "status": "Enabled"
+              }
+            ]
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "aws_s3_bucket.bucket"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_s3_bucket_website_configuration",
+      "name": "website-config",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "bucket": "kaveri-static-website",
+            "error_document": [],
+            "expected_bucket_owner": "",
+            "id": "kaveri-static-website",
+            "index_document": [
+              {
+                "suffix": "index.html"
+              }
+            ],
+            "redirect_all_requests_to": [],
+            "routing_rule": [],
+            "routing_rules": "",
+            "website_domain": "s3-website.ap-south-1.amazonaws.com",
+            "website_endpoint": "kaveri-static-website.s3-website.ap-south-1.amazonaws.com"
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA=="
+        }
+      ]
+    }
+  ],
+  "check_results": null
+}
