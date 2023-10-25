@@ -1,3 +1,4 @@
+#comment
 variable "static_bucket_name"{
     type = string
     default = "kaveri-static-website"
